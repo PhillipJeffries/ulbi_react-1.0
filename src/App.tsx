@@ -9,13 +9,14 @@ import { HomePageAsync } from "./pages/HomePage/HomePage.async";
 import { AboutPageAsync } from "./pages/AboutPage/AboutPage.async";
 
 import { useTheme } from "./theme/useTheme";
+import { classNames } from "./helpers/classNames/classNames";
 
 export const App = () => {
     const {theme, toggleTheme} = useTheme();
 
 
     return (
-        <div className={`app ${theme}`}>
+        <div className={classNames('app', {}, [theme])}>
             <Link to={'/about'}>about</Link>
             <Link to={'/'}>home</Link>
             <Suspense fallback={<div>loading...</div>}>
