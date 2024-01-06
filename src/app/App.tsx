@@ -5,11 +5,11 @@ import "./styles/index.scss";
 import { Suspense } from "react";
 
 import { Link } from "react-router-dom";
-import { HomePageAsync } from "./pages/HomePage/HomePage.async";
-import { AboutPageAsync } from "./pages/AboutPage/AboutPage.async";
+import { HomePage } from "pages/HomePage";
+import { AboutPage } from "pages/AboutPage";
 
-import { useTheme } from "./theme/useTheme";
-import { classNames } from "./helpers/classNames/classNames";
+import { useTheme } from "app/providers/ThemeProvider";
+import { classNames } from "shared/lib/classNames/classNames";
 
 export const App = () => {
     const {theme, toggleTheme} = useTheme();
@@ -21,8 +21,8 @@ export const App = () => {
             <Link to={'/'}>home</Link>
             <Suspense fallback={<div>loading...</div>}>
                 <Routes>
-                    <Route path={'/'} element={<HomePageAsync />} />
-                    <Route path={'/about'} element={<AboutPageAsync />} />
+                    <Route path={'/'} element={<HomePage />} />
+                    <Route path={'/about'} element={<AboutPage />} />
                 </Routes>
             </Suspense>
             <button onClick={toggleTheme}>change theme</button>

@@ -7,7 +7,8 @@ export default (env: BuildEnv): webpack.Configuration => {
     const paths: BuildPaths = {
         entry: path.resolve(__dirname, 'src', 'index.tsx'),
         build: path.resolve(__dirname, 'dist'),
-        html: path.resolve('public', 'index.html')
+        html: path.resolve('public', 'index.html'),
+        src: path.resolve(__dirname, 'src')
     }
     
     const mode = env.mode || 'development';
