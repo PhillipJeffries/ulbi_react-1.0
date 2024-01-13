@@ -1,3 +1,4 @@
+import { ThemeSwitcher } from "widgets/ThemeSwitcher";
 import cls from "./Navbar.modules.scss"
 import { AppLink, AppLinkTheme } from "shared/ui/AppLink/AppLink";
 
