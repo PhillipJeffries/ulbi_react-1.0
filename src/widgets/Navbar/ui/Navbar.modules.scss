@@ -1,0 +1,15 @@
+.navbar {
+    color: var(--primary-color-inverted);
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    gap: var(--padding-s);
+    padding: var(--padding-s);
+    background-color: var(--bg-color-inverted);
+    border: solid 2px rgb(153, 63, 196);
+    border-radius: 20px;
+    .links {
+        display: flex;
+        gap: 20px;
+    }
+}
