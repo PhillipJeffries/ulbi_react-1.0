@@ -1,14 +1,14 @@
-import { Suspense } from "react";
-import { useTranslation } from "react-i18next";
+import { type ReactNode } from 'react'
+import { useTranslation } from 'react-i18next'
 
-const AboutPage = () => {
-    const { t } = useTranslation('about')
+const AboutPage = (): ReactNode => {
+  const { t } = useTranslation('about')
 
-    return (
+  return (
         <div>
             <h1>{t('Информация')}</h1>
         </div>
-    )
+  )
 }
 
-export default AboutPage;
+export default AboutPage

@@ -14,11 +14,16 @@
         },
         //to use imports
         "esModuleInterop": true,
-        "allowSyntheticDefaultImports": true
+        "allowSyntheticDefaultImports": true,
+        "strictNullChecks": true,
+        // "types": ["react/next", "react-dom/next"]
     },
     "ts-node": {
         "compilerOptions": {
             "module": "CommonJS"
         }
-    }
+    },
+    "exclude": [
+        "eslintrc.js",
+    ],
 }
