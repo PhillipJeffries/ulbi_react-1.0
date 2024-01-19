@@ -8,8 +8,9 @@
     gap: var(--padding-s);
     padding: 0 var(--padding-s);
     background-color: var(--bg-color-inverted);
-    border: solid 2px rgb(153, 63, 196);
+    border: solid 2px rgb(153 63 196);
     border-radius: 20px;
+
     .links {
         display: flex;
         gap: 20px;

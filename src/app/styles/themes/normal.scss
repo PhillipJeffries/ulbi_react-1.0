@@ -1,12 +1,10 @@
 .app.light {
-    --bg-color: rgb(238, 229, 163);
-    --bg-color-inverted: rgb(35, 35, 130);
-
-    --primary-color: rgb(15, 60, 23);
-    --secondary-color: rgb(86, 117, 92);
-
-    --primary-color-inverted: rgb(6, 191, 40);
-    --secondary-color-inverted: rgb(94, 255, 123);
+    --bg-color: rgb(238 229 163);
+    --bg-color-inverted: rgb(35 35 130);
+    --primary-color: rgb(15 60 23);
+    --secondary-color: rgb(86 117 92);
+    --primary-color-inverted: rgb(6 191 40);
+    --secondary-color-inverted: rgb(94 255 123);
 
     min-height: 100vh;
 }
