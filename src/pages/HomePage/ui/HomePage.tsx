@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next'
-import { Counter } from '../../../components/Counter'
+import { Counter } from '../../../components/counter/Counter'
 import { type ReactNode } from 'react'
 
 const HomePage = (): ReactNode => {
