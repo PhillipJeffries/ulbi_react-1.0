@@ -1,11 +1,13 @@
-import { someFn } from "./test";
-import { render } from "react-dom";
-import { App } from "./App";
+import { createRoot } from 'react-dom/client';
+import { BrowserRouter } from "react-router-dom";
 import './index.scss';
 
-someFn()
+import { App } from "./App";
 
-render(
-    <App/>,
-    document.getElementById('root')
+const root = createRoot(document.getElementById('root'));
+
+root.render(
+    <BrowserRouter>
+        <App/>
+    </BrowserRouter>
 )
