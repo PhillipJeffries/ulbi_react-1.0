@@ -1,18 +1,22 @@
 import { Route, Routes } from "react-router-dom";
-import { Counter } from "./components/Counter";
 
-import "./index.scss";
-import HomePage from "./pages/HomePage/HomePage";
-import AboutPage from "./pages/AboutPage/AboutPage";
+import "./styles/index.scss";
+
+import { Suspense } from "react";
+
 import { Link } from "react-router-dom";
 import { HomePageAsync } from "./pages/HomePage/HomePage.async";
 import { AboutPageAsync } from "./pages/AboutPage/AboutPage.async";
-import { Suspense } from "react";
 
+import { useTheme } from "./theme/useTheme";
+import { classNames } from "./helpers/classNames/classNames";
 
 export const App = () => {
+    const {theme, toggleTheme} = useTheme();
+
+
     return (
-        <div className="app">
+        <div className={classNames('app', {}, [theme])}>
             <Link to={'/about'}>about</Link>
             <Link to={'/'}>home</Link>
             <Suspense fallback={<div>loading...</div>}>
@@ -21,6 +25,7 @@ export const App = () => {
                     <Route path={'/about'} element={<AboutPageAsync />} />
                 </Routes>
             </Suspense>
+            <button onClick={toggleTheme}>change theme</button>
         </div>
     )
 };
