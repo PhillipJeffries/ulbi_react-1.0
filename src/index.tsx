@@ -1,10 +1,11 @@
 import { someFn } from "./test";
 import { render } from "react-dom";
-import {Counter} from "./components/counter";
+import { App } from "./App";
+import './index.scss';
 
 someFn()
 
 render(
-    <div>hello<Counter/></div>,
+    <App/>,
     document.getElementById('root')
 )
