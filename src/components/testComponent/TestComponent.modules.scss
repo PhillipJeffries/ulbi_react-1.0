@@ -1,0 +1,9 @@
+.testComponent {
+    display: flex;
+    // width: 100%;
+    overflow-x: auto;
+    width: 700px;
+    .Item {
+        width: 100px;
+    }
+}
