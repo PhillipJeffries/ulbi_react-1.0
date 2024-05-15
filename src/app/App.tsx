@@ -10,6 +10,7 @@ import { AboutPage } from "pages/AboutPage";
 
 import { useTheme } from "app/providers/ThemeProvider";
 import { classNames } from "shared/lib/classNames/classNames";
+import { AppRouter } from "app/providers/router";
 
 export const App = () => {
     const {theme, toggleTheme} = useTheme();
@@ -19,12 +20,7 @@ export const App = () => {
         <div className={classNames('app', {}, [theme])}>
             <Link to={'/about'}>about</Link>
             <Link to={'/'}>home</Link>
-            <Suspense fallback={<div>loading...</div>}>
-                <Routes>
-                    <Route path={'/'} element={<HomePage />} />
-                    <Route path={'/about'} element={<AboutPage />} />
-                </Routes>
-            </Suspense>
+            <AppRouter/>
             <button onClick={toggleTheme}>change theme</button>
         </div>
     )
