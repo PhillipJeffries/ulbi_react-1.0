@@ -4,19 +4,21 @@ import { routeConfig } from 'shared/config/routeConfig/routeConfig'
 
 const AppRouter = (): ReactNode => {
   return (
-        <div className="page-wrapper">
-            <Suspense fallback={<div>loading...</div>}>
-                <Routes>
-                    {Object.values(routeConfig).map(({ element, path }) => (
-                        <Route
-                            key={path}
-                            path={path}
-                            element={element}
-                        />
-                    ))}
-                </Routes>
-            </Suspense>
-        </div>
+            <Routes>
+                {Object.values(routeConfig).map(({ element, path }) => (
+                    <Route
+                        key={path}
+                        path={path}
+                        element={(
+                            <Suspense fallback={<div>Loadind...</div>}>
+                                <div className='page-wrapper'>
+                                    {element}
+                                </div>
+                            </Suspense>
+                        )}
+                    />
+                ))}
+            </Routes>
 
   )
 }

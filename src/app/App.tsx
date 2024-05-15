@@ -10,6 +10,10 @@ import { Suspense, type ReactNode } from 'react'
 export const App = (): ReactNode => {
   const { theme } = useTheme()
 
+  if (theme === undefined) {
+    throw new Error('Can\'t get theme')
+  }
+
   return (
         <div className={classNames('app', {}, [theme])}>
             <Suspense fallback="">

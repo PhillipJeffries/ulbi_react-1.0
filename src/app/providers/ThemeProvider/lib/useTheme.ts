@@ -9,6 +9,10 @@ interface UseThemeResult {
 export function useTheme (): UseThemeResult {
   const { theme, setTheme } = useContext(ThemeContext)
 
+  if (setTheme === undefined) {
+    throw new Error('It has been happend')
+  }
+
   const toggleTheme = (): void => {
     // theme === Theme.LIGHT ? setTheme(Theme.DARK) : setTheme(Theme.LIGHT)
     const newTheme = theme === Theme.DARK ? Theme.LIGHT : Theme.DARK
