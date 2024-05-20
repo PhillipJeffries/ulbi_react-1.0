@@ -10,12 +10,15 @@
         //for absolut imports
         "baseUrl": ".",
         "paths": {
-            "*": ["./src/*"]
+            "*": [
+                "./src/*"
+            ]
         },
         //to use imports
         "esModuleInterop": true,
         "allowSyntheticDefaultImports": true,
         "strictNullChecks": true,
+        "preserveConstEnums": true
         // "types": ["react/next", "react-dom/next"]
     },
     "ts-node": {
@@ -23,7 +26,10 @@
             "module": "CommonJS"
         }
     },
+    "include": [
+        "src/**/*", "config/jest/setupTests.ts"
+    ],
     "exclude": [
         "eslintrc.js",
-    ],
+    ]
 }
